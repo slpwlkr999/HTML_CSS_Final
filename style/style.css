@@ -60,10 +60,12 @@ body { /* tag */
     /* o flex coloca os elementos no sentido de linha |  alinha os filhos dentro do pai -> flex-direction:  | como não declaramos, o padrão é row */
     align-items: center; /* auto-explicativo. alinhar os itens relacionados ao seu próprio alinhamento */
     justify-content: space-between; /* responsável por distribuir os filhos dentro do pai */
+    gap: 82px;    
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    /* width: 615px; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;    
@@ -93,13 +95,13 @@ body { /* tag */
     font-weight: 400;
 }
 
-.apresentacao__links__link {    
+.apresentacao__links__navegacao {    
     /* background-color: #22D4FD; */
     display: flex; /* o padrão do flexbox é jogar os itens no canto esquerdo */
     justify-content: center; /* ajuste de elementos */
     flex-direction: row; /* direcionamento e posicionamento dos itens */
     border: var(--cor-tercearia) 1.7px solid;
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
     font-size: 1.5rem;
@@ -113,8 +115,13 @@ body { /* tag */
     align-items: center;  
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__navegacao:hover{
     background-color: var(--cor-hover);
+}
+
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 .rodape {
@@ -129,4 +136,21 @@ body { /* tag */
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao  {        
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        /* largura fixa. Precisa existir para distribuir todo o conteúdo de dentro de forma uniforme */
+        width: auto;
+    }
 }
