@@ -14,7 +14,8 @@
     /* hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS. */
     --cor-primaria: #2C3639;
     --cor-secundaria:#DCD7C9; 
-    --cor-tercearia: #A27B5C;
+    /* --cor-tercearia: #A27B5C; */
+    --cor-tercearia: #22D4FD;
     --cor-hover: #3F434F;
 
     /* uso das variaveis: exemplo | color: var(--cor-primaria); */
