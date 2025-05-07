@@ -134,6 +134,7 @@ body { /* tag */
     text-align: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
