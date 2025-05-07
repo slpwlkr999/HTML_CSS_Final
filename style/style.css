@@ -117,7 +117,7 @@ body {
   font-weight: 600;
   gap: 16px;
   align-items: center;
-  transition: 0.7s all;
+  transition: 0.3s all;
 }
 
 .apresentacao__links__navegacao:hover {
