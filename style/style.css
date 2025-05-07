@@ -2,157 +2,160 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300;600&display=swap");
 
-* { /* reset "Coringa". há outros resets mais avançados com reset.css */
-    margin: 0;
-    padding: 0;
+* {
+  /* reset "Coringa". há outros resets mais avançados com reset.css */
+  margin: 0;
+  padding: 0;
 }
 
 /* escopo global */
 :root {
-    /* hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS. */
-    --cor-primaria: #2C3639;
-    --cor-secundaria:#DCD7C9; 
-    /* --cor-tercearia: #A27B5C; */
-    --cor-tercearia: #22D4FD;
-    --cor-hover: #3F434F;
+  /* hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS. */
+  --cor-primaria: #2c3639;
+  --cor-secundaria: #dcd7c9;
+  /* --cor-tercearia: #A27B5C; */
+  --cor-tercearia: #22d4fd;
+  --cor-hover: #3f434f;
 
-    /* uso das variaveis: exemplo | color: var(--cor-primaria); */
+  /* uso das variaveis: exemplo | color: var(--cor-primaria); */
 
-    --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Monserrat', sans-serif;
+  --fonte-primaria: "Krona One", sans-serif;
+  --fonte-secundaria: "Monserrat", sans-serif;
 }
 
-body { /* tag */
-    /* height: 100vh; /* altura para todo o corpo da página | viewport height */
-    /* escopo local | */
-    box-sizing: border-box; /* a borderbox faz com que os elementos filhos se encolham para que caibam no pai */
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+body {
+  /* tag */
+  /* height: 100vh; /* altura para todo o corpo da página | viewport height */
+  /* escopo local | */
+  box-sizing: border-box; /* a borderbox faz com que os elementos filhos se encolham para que caibam no pai */
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
 }
 
-.tituloDestaque { /* class */
-    color: var(--cor-tercearia);    
+.tituloDestaque {
+  /* class */
+  color: var(--cor-tercearia);
 }
 
 /* */
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+  padding: 2% 0% 0% 15%;
 }
 
 .cabecalho__menu {
-    display: flex;        
-    gap: 80px;
+  display: flex;
+  gap: 80px;
 }
 
-.cabecalho__menu__link {    
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--cor-tercearia);
-    font-family: var(--fonte-secundaria);
-    text-decoration: NONE;
+.cabecalho__menu__link {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--cor-tercearia);
+  font-family: var(--fonte-secundaria);
+  text-decoration: NONE;
 }
 
 .apresentacao {
-    padding: 5% 15%;
-    display: flex; /* flexbox cria layouts auxiliando na distribuição dos filhos do container sejam linhas ou colunas. Propriedade para o pai */
-    /* o flex coloca os elementos no sentido de linha |  alinha os filhos dentro do pai -> flex-direction:  | como não declaramos, o padrão é row */
-    align-items: center; /* auto-explicativo. alinhar os itens relacionados ao seu próprio alinhamento */
-    justify-content: space-between; /* responsável por distribuir os filhos dentro do pai */
-    gap: 82px;    
+  padding: 5% 15%;
+  display: flex; /* flexbox cria layouts auxiliando na distribuição dos filhos do container sejam linhas ou colunas. Propriedade para o pai */
+  /* o flex coloca os elementos no sentido de linha |  alinha os filhos dentro do pai -> flex-direction:  | como não declaramos, o padrão é row */
+  align-items: center; /* auto-explicativo. alinhar os itens relacionados ao seu próprio alinhamento */
+  justify-content: space-between; /* responsável por distribuir os filhos dentro do pai */
+  gap: 82px;
 }
 
 .apresentacao__conteudo {
-    /* width: 615px; */
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;    
+  /* width: 615px; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    /* font-size: 36px; */
-    font-size: 2.25rem;
-    font-family: var(--fonte-primaria);
+  /* font-size: 36px; */
+  font-size: 2.25rem;
+  font-family: var(--fonte-primaria);
 }
 
 .apresentacao__conteudo__paragrafo {
-    font-size: 1.5rem;
-    font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links {    
-    display: flex; /* posiciona elementos na tela */
-    justify-content: space-between;
-    flex-direction: column; /* auto-explicativo. Se não tiver um flex-direction declarado, automaticamente considera-se row. */
-    align-items: center;
-    gap: 32px;
+.apresentacao__links {
+  display: flex; /* posiciona elementos na tela */
+  justify-content: space-between;
+  flex-direction: column; /* auto-explicativo. Se não tiver um flex-direction declarado, automaticamente considera-se row. */
+  align-items: center;
+  gap: 32px;
 }
 
 .apresentacao__links__subtitulo {
-    font-family: var(--fonte-primaria);
-    font-weight: 400;
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
 }
 
-.apresentacao__links__navegacao {    
-    /* background-color: #22D4FD; */
-    display: flex; /* o padrão do flexbox é jogar os itens no canto esquerdo */
-    justify-content: center; /* ajuste de elementos */
-    flex-direction: row; /* direcionamento e posicionamento dos itens */
-    border: var(--cor-tercearia) 1.7px solid;
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    padding: 21.5px 0;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    text-transform: uppercase;
-    font-family: var(--fonte-secundaria);
-    font-weight: 600;
-    gap: 16px;
-    align-items: center;  
+.apresentacao__links__navegacao {
+  /* background-color: #22D4FD; */
+  display: flex; /* o padrão do flexbox é jogar os itens no canto esquerdo */
+  justify-content: center; /* ajuste de elementos */
+  flex-direction: row; /* direcionamento e posicionamento dos itens */
+  border: var(--cor-tercearia) 1.7px solid;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 21.5px 0;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  text-transform: uppercase;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  gap: 16px;
+  align-items: center;
+  transition: 0.7s all;
 }
 
-.apresentacao__links__navegacao:hover{
-    background-color: var(--cor-hover);
+.apresentacao__links__navegacao:hover {
+  background-color: var(--cor-hover);
 }
-
 
 .apresentacao__imagem {
-    width: 50%;
+  width: 50%;
 }
 
 .rodape {
-    /* enquanto não tiver um demarcador, será do tamanho do conteúdo. */
-    /* margin: da borda pra fora; padding: da borda da telea para dentro do conteúdo */
-    color: var(--cor-primaria);
-    padding: 24px;
-    background-color: var(--cor-tercearia);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-    font-weight: 400;
+  /* enquanto não tiver um demarcador, será do tamanho do conteúdo. */
+  /* margin: da borda pra fora; padding: da borda da telea para dentro do conteúdo */
+  color: var(--cor-primaria);
+  padding: 24px;
+  background-color: var(--cor-tercearia);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 @media (max-width: 1200px) {
-    .cabecalho {
-        padding: 10%;
-    }
-    .cabecalho__menu {
-        justify-content: center;
-    }
-    .apresentacao  {        
-        flex-direction: column-reverse;
-        padding: 5%;
-    }
-    .apresentacao__conteudo {
-        /* largura fixa. Precisa existir para distribuir todo o conteúdo de dentro de forma uniforme */
-        width: auto;
-    }
+  .cabecalho {
+    padding: 10%;
+  }
+  .cabecalho__menu {
+    justify-content: center;
+  }
+  .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+  .apresentacao__conteudo {
+    /* largura fixa. Precisa existir para distribuir todo o conteúdo de dentro de forma uniforme */
+    width: auto;
+  }
 }
